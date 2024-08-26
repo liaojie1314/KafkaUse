@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: kafka-03-base
+  # kafka连接地址(ip+port)
+  kafka:
+    bootstrap-servers: localhost:9092
+    # 配置消息监听器
+    listener:
+      type: batch # batch:批量模式; normal:普通模式
+    consumer:
+      max-poll-records: 20 # 每次最多消费多少条消息
+      auto-offset-reset: earliest # 从最早的消息开始消费

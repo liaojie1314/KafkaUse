@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: kafka-01-base
+  # kafka连接地址(ip+port)
+  kafka:
+    bootstrap-servers: localhost:9092
+    # 生产者配置
+    producer:
+      # 默认为StringSerializer.class序列化
+      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
+#      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+    # 消费者配置
+    consumer:
+      auto-offset-reset: earliest
+
+    template:
+      default-topic: default-topic

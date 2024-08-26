@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: kafka-04-base
+  # kafka连接地址(ip+port)
+  kafka:
+    bootstrap-servers: localhost:9092
+    # 消费者配置
+    consumer:
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer

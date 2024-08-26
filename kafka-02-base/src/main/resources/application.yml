@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: kafka-02-base
+  # kafka连接地址(ip+port)
+  kafka:
+    bootstrap-servers: localhost:9092
+
+    listener:
+      ack-mode: manual # 手动确认
+
+    consumer:
+      auto-offset-reset: earliest
+
+# 自定义配置
+kafka:
+  topic:
+    name: helloTopic
+  consumer:
+    group: helloGroup2
